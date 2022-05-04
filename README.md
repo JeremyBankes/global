@@ -1,2 +1,2 @@
-# global
-Jeremy's reusable global stylesheet.
+# Global
+## Jeremy's reusable global stylesheet.
