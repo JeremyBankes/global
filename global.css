@@ -159,6 +159,21 @@ input[type=range]::before {
     transform: translateY(-50%);
 }
 
+input[type=color] {
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+input[type=color]::-webkit-color-swatch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    border: none;
+}
+
 hr {
     display: inline-block;
     width: 100%;
@@ -178,7 +193,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
     justify-content: stretch;
-    align-items: flex-start;
+    align-items: stretch;
     gap: var(--space-2);
 }
 
@@ -254,6 +269,10 @@ hr {
     padding: var(--space-2);
     background-color: var(--color-background-1);
     border-radius: var(--border-radius);
+}
+
+.card .card {
+    border: var(--border-1);
 }
 
 .border {
