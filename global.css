@@ -55,7 +55,8 @@ label {
 input,
 select,
 textarea,
-button {
+button,
+.button {
     position: relative;
     padding: var(--space-1);
     background-color: var(--color-background-4);
@@ -85,18 +86,23 @@ input::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
-input[type=submit], input[type=reset], input[type=button], button {
+input[type=submit],
+input[type=reset],
+input[type=button],
+button,
+.button {
     cursor: pointer;
 }
 
 input[type=submit] {
     background-color: var(--color-accent-1);
-    color: var(--color-text-2);
+    color: var(--color-text-1);
     font-weight: bold;
     border: none;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
     height: auto;
 }
 
