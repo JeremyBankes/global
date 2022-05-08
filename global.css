@@ -96,7 +96,7 @@ button,
 
 input[type=submit] {
     background-color: var(--color-accent-1);
-    color: var(--color-text-1);
+    color: var(--color-text-2);
     font-weight: bold;
     border: none;
 }
