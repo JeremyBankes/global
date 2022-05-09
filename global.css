@@ -8,6 +8,7 @@
 html {
     height: 100%;
     overflow-y: scroll;
+    background-color: var(--color-background-3);
 }
 
 body {
@@ -22,7 +23,6 @@ h4,
 h5,
 h6 {
     font-family: var(--font-family-2);
-    font-weight: normal;
 }
 
 a {
@@ -33,13 +33,13 @@ a {
 header,
 footer {
     padding: var(--space-2);
-    background-color: var(--color-background-3);
-    color: var(--color-text-3);
+    background-color: var(--color-background-1);
+    color: var(--color-text-4);
 }
 
 header nav a,
 footer nav a {
-    color: var(--color-text-3);
+    color: var(--color-text-5);
 }
 
 main {
@@ -47,9 +47,23 @@ main {
     margin-bottom: var(--space-2);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 label {
     font-size: small;
     user-select: none;
+}
+
+summary {
+    user-select: none;
+    cursor: pointer;
+}
+
+details[open] > summary {
+    margin-bottom: var(--space-3);
 }
 
 input,
@@ -60,7 +74,7 @@ button,
     position: relative;
     padding: var(--space-1);
     background-color: var(--color-background-4);
-    color: var(--color-text-4);
+    color: var(--color-text-2);
     border: var(--border-1);
     outline: none;
     border-radius: var(--border-radius);
@@ -96,7 +110,7 @@ button,
 
 input[type=submit] {
     background-color: var(--color-accent-1);
-    color: var(--color-text-2);
+    color: var(--color-text-3);
     font-weight: bold;
     border: none;
 }
@@ -123,6 +137,7 @@ input[type=color]::-webkit-color-swatch {
 
 hr {
     display: inline-block;
+    width: 100%;
     height: var(--border-thickness);
     border: none;
     border-bottom: var(--border-1);
@@ -252,6 +267,12 @@ hr {
 
 .italic {
     font-style: italic;
+}
+
+.expandingWidth {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .maximumWidth1 {
