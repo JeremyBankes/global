@@ -30,6 +30,12 @@ a {
     text-decoration: none;
 }
 
+ul,
+ol {
+    padding-left: var(--space-5);
+    list-style: square;
+}
+
 header,
 footer {
     padding: var(--space-2);
@@ -62,7 +68,7 @@ summary {
     cursor: pointer;
 }
 
-details[open] > summary {
+details[open]>summary {
     margin-bottom: var(--space-3);
 }
 
@@ -70,7 +76,8 @@ input,
 select,
 textarea,
 button,
-.button {
+.button,
+.fancyButton {
     position: relative;
     padding: var(--space-1);
     background-color: var(--color-background-4);
@@ -85,7 +92,7 @@ button,
 
 textarea {
     resize: vertical;
-    min-height: var(--space-5);
+    min-height: var(--height-2);
 }
 
 input::-webkit-calendar-picker-indicator {
@@ -104,11 +111,14 @@ input[type=submit],
 input[type=reset],
 input[type=button],
 button,
-.button {
+.button,
+.fancyButton {
+    text-align: center;
     cursor: pointer;
 }
 
-input[type=submit] {
+input[type=submit],
+.fancyButton {
     background-color: var(--color-accent-1);
     color: var(--color-text-3);
     font-weight: bold;
@@ -144,7 +154,8 @@ hr {
     background-color: var(--color-border-1);
 }
 
-:disabled {
+:disabled,
+.disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -241,11 +252,55 @@ hr {
     border: var(--border-1);
 }
 
+
+.loading {
+    position: relative;
+    overflow: visible;
+}
+
+.loading::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: var(--opacity-translucent);
+    border-radius: var(--border-radius);
+    z-index: 2;
+}
+
+.loading:after {
+    content: ' ';
+    position: absolute;
+    width: var(--space-5);
+    height: var(--space-5);
+    top: calc(50% - var(--space-5));
+    left: calc(50% - var(--space-5));
+    border-radius: 50%;
+    border: var(--space-2) solid var(--color-accent-1);
+    border-color: transparent var(--color-accent-1) transparent var(--color-accent-1);
+    animation: loading 1s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
 .checkboxContainer,
 .radioContainer {
     display: grid;
     grid-template-columns: min-content 1fr;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     gap: var(--space-1);
 }
 
