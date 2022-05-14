@@ -36,6 +36,22 @@ ol {
     list-style: square;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--color-background-3);
+    color: var(--color-text-3);
+}
+
+th, td {
+    text-align: center;
+    font-size: var(--font-size-1);
+    padding-top: var(--space-1);
+    padding-bottom: var(--space-1);
+}
+
 header,
 footer {
     padding: var(--space-2);
