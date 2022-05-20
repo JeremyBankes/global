@@ -60,9 +60,13 @@ footer {
     color: var(--color-text-4);
 }
 
-header nav a,
-footer nav a {
+nav a {
     color: var(--color-text-5);
+}
+
+nav a.active {
+    color: var(--color-accent-1);
+    border-bottom: var(--border-1);
 }
 
 main {
@@ -267,6 +271,10 @@ hr {
     flex-grow: var(--weight-5);
 }
 
+.noTextWrap {
+    white-space: nowrap;
+}
+
 .card {
     padding: var(--space-2);
     background-color: var(--color-background-1);
@@ -280,7 +288,6 @@ hr {
 .border {
     border: var(--border-1);
 }
-
 
 .loading {
     position: relative;
@@ -331,6 +338,27 @@ hr {
     align-items: flex-start;
     justify-content: center;
     gap: var(--space-1);
+}
+
+.tableContainer {
+    position: relative;
+    height: 0;
+    border: var(--border-1);
+    overflow-y: scroll;
+}
+
+.tableContainer>table {
+    width: 100%;
+}
+
+.tableContainer>table>thead {
+    top: 0;
+    position: sticky;
+}
+
+.verticalScrollContainer {
+    height: 0;
+    overflow-y: scroll;
 }
 
 .gapless {
