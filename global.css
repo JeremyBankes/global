@@ -49,8 +49,8 @@ th,
 td {
     text-align: center;
     font-size: var(--font-size-1);
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
+    padding-left: var(--space-1);
+    padding-right: var(--space-1);
 }
 
 header,
@@ -191,6 +191,14 @@ hr {
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.removed {
+    display: none;
 }
 
 /* Layout */
