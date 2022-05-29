@@ -474,3 +474,19 @@ hr {
 .textColor5 {
     color: var(--color-text-5);
 }
+
+.textColorPositive1 {
+    color: var(--color-positive-1);
+}
+
+.textColorPositive2 {
+    color: var(--color-positive-2);
+}
+
+.textColorNegative1 {
+    color: var(--color-negative-1);
+}
+
+.textColorNegative2 {
+    color: var(--color-negative-2);
+}
