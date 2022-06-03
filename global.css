@@ -51,6 +51,7 @@ td {
     font-size: var(--font-size-1);
     padding-left: var(--space-1);
     padding-right: var(--space-1);
+    white-space: nowrap;
 }
 
 header,
