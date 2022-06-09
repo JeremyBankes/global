@@ -376,7 +376,7 @@ hr {
 
 .verticalScrollContainer {
     height: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .gapless {
