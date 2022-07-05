@@ -251,6 +251,7 @@ hr {
 
 .column {
     flex: 1 0 0;
+    min-width: var(--width-1);
 }
 
 .weight0 {
@@ -348,10 +349,10 @@ hr {
 
 .tableContainer {
     position: relative;
+    min-height: var(--height-4);
     height: 0;
     border: var(--border-1);
-    overflow-x: auto;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .tableContainer>table {
@@ -361,6 +362,11 @@ hr {
 .tableContainer>table>thead {
     top: 0;
     position: sticky;
+}
+
+.horizontalScrollContainer {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .verticalScrollContainer {
@@ -412,6 +418,10 @@ hr {
 
 .maximumWidth5 {
     max-width: var(--width-5);
+}
+
+.minimumWidth0 {
+    min-width: auto;
 }
 
 .minimumWidth1 {
