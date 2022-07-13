@@ -249,6 +249,11 @@ hr {
     justify-content: flex-end;
 }
 
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+
 .column {
     flex: 1 0 0;
 }
@@ -541,7 +546,7 @@ hr {
 :disabled,
 .disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
 
 .hidden {
