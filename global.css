@@ -120,6 +120,10 @@ button,
     accent-color: var(--color-accent-1);
 }
 
+input::placeholder {
+    color: var(--color-text-4);
+}
+
 textarea {
     resize: vertical;
     min-height: var(--height-2);
@@ -502,6 +506,26 @@ hr {
 
 .fontSize5 {
     font-size: var(--font-size-5);
+}
+
+.fontWeight1 {
+    font-weight: var(--font-weight-1);
+}
+
+.fontWeight2 {
+    font-weight: var(--font-weight-2);
+}
+
+.fontWeight3 {
+    font-weight: var(--font-weight-3);
+}
+
+.fontWeight4 {
+    font-weight: var(--font-weight-4);
+}
+
+.fontWeight5 {
+    font-weight: var(--font-weight-5);
 }
 
 .textColor1 {
