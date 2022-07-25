@@ -2,7 +2,8 @@
     /** Colors */
     --background-color: #ffffff;
     --foreground-color: #000000;
-    --border-color: #eeeeee;
+    --secondary-color: #eeeeee;
+    --border-color: #dddddd;
     --accent-color: #0000aa;
     --color-positive: #33aa33;
     --color-neutral: #eeaa33;
@@ -24,8 +25,8 @@
     --weight-larger: 5;
 
     /** Font */
-    --font-normal: 'Segoe UI';
-    --font-heading: 'Segoe UI';
+    --font-normal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-input: monospace;
 
     /** Font Size */
@@ -50,7 +51,7 @@
     --height-larger: 600px;
 
     /** Miscellaneous */
-    --border: 1px solid black;
+    --border: 1px solid var(--border-color);
     --border-radius: 0;
     --opacity-translucent: 0.5;
 }
@@ -64,6 +65,7 @@
 html {
     display: grid;
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -92,6 +94,7 @@ a {
 
 img {
     width: 100%;
+    height: auto;
     border-radius: var(--border-radius);
 }
 
@@ -100,8 +103,10 @@ label {
 }
 
 input,
+button,
 textarea {
     padding: var(--space-small);
+    background-color: var(--secondary-color);
     border: var(--border);
     font-size: var(--font-size-medium);
     font-family: var(--font-input);
@@ -117,6 +122,7 @@ input[type='submit'],
 button {
     background-color: var(--accent-color);
     color: var(--background-color);
+    border: none;
     font-weight: bold;
     cursor: pointer;
 }
@@ -127,6 +133,7 @@ input:focus {
 
 hr {
     width: 100%;
+    margin: 0;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -165,6 +172,18 @@ hr {
 
 .gapless {
     gap: 0;
+}
+
+.horizontalGap {
+    gap: 0 var(--space-medium);
+}
+
+.verticalGap {
+    gap: var(--space-medium) 0;
+}
+
+.noWrap {
+    flex-wrap: nowrap;
 }
 
 .weightNone {
@@ -223,6 +242,10 @@ hr {
     justify-content: stretch;
 }
 
+.noTextWrap {
+    white-space: nowrap;
+}
+
 .maximumWidthSmaller {
     max-width: var(--width-smaller);
 }
@@ -235,7 +258,7 @@ hr {
     max-width: var(--width-medium);
 }
 
-.maximumWidthLarger {
+.maximumWidthLarge {
     max-width: var(--width-large);
 }
 
@@ -255,12 +278,58 @@ hr {
     min-width: var(--width-medium);
 }
 
-.minimumWidthLarger {
+.minimumWidthLarge {
     min-width: var(--width-large);
 }
 
 .minimumWidthLarger {
     min-width: var(--width-larger);
+}
+
+.maximumHeightSmaller {
+    max-height: var(--height-smaller);
+}
+
+.maximumHeightSmall {
+    max-height: var(--height-small);
+}
+
+.maximumHeightMedium {
+    max-height: var(--height-medium);
+}
+
+.maximumHeightLarge {
+    max-height: var(--height-large);
+}
+
+.maximumHeightLarger {
+    max-height: var(--height-larger);
+}
+
+.minimumHeightSmaller {
+    min-height: var(--height-smaller);
+}
+
+.minimumHeightSmall {
+    min-height: var(--height-small);
+}
+
+.minimumHeightMedium {
+    min-height: var(--height-medium);
+}
+
+.minimumHeightLarge {
+    min-height: var(--height-large);
+}
+
+.minimumHeightLarger {
+    min-height: var(--height-larger);
+}
+
+.expandingWidth {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 200px) {
@@ -298,6 +367,10 @@ hr {
 
     .justifyStretchAtSmallerWidth {
         justify-content: stretch;
+    }
+
+    .hideAtSmallerWidth {
+        display: none;
     }
 }
 
@@ -337,6 +410,10 @@ hr {
     .justifyStretchAtSmallWidth {
         justify-content: stretch;
     }
+
+    .hideAtSmallWidth {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -374,6 +451,10 @@ hr {
 
     .justifyStretchAtMediumWidth {
         justify-content: stretch;
+    }
+
+    .hideAtMediumWidth {
+        display: none;
     }
 }
 
@@ -413,6 +494,10 @@ hr {
     .justifyStretchAtLargeWidth {
         justify-content: stretch;
     }
+
+    .hideAtLargeWidth {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -451,6 +536,10 @@ hr {
     .justifyStretchAtLargerWidth {
         justify-content: stretch;
     }
+
+    .hideAtLargerWidth {
+        display: none;
+    }
 }
 
 /** Utility */
@@ -460,6 +549,18 @@ hr {
     border: var(--border);
     border-radius: var(--border-radius);
     background-color: var(--background-color);
+}
+
+.breathable {
+    padding: var(--space-medium);
+}
+
+.breathableHorizontal {
+    padding: 0 var(--space-medium);
+}
+
+.breathableVertical {
+    padding: var(--space-medium) 0;
 }
 
 .textAlignStart {
@@ -472,6 +573,14 @@ hr {
 
 .textAlignEnd {
     text-align: end;
+}
+
+.textColorBackground {
+    color: var(--background-color);
+}
+
+.textColorSecondary {
+    color: var(--secondary-color);
 }
 
 .textColorNormal {
@@ -494,6 +603,26 @@ hr {
     color: var(--color-negative);
 }
 
+.fontSizeSmaller {
+    font-size: var(--font-size-smaller);
+}
+
+.fontSizeSmall {
+    font-size: var(--font-size-small);
+}
+
+.fontSizeMedium {
+    font-size: var(--font-size-medium);
+}
+
+.fontSizeLarge {
+    font-size: var(--font-size-large);
+}
+
+.fontSizeLarger {
+    font-size: var(--font-size-larger);
+}
+
 @media (prefers-reduced-motion: no-preference) {
     [animateIn] {
         opacity: 0;
@@ -501,23 +630,23 @@ hr {
     }
 
     .animationDelaySmaller {
-        animation-delay: 100ms;
-    }
-
-    .animationDelaySmall {
         animation-delay: 200ms;
     }
 
-    .animationDelayMedium {
-        animation-delay: 300ms;
-    }
-
-    .animationDelayLarge {
+    .animationDelaySmall {
         animation-delay: 400ms;
     }
 
+    .animationDelayMedium {
+        animation-delay: 600ms;
+    }
+
+    .animationDelayLarge {
+        animation-delay: 800ms;
+    }
+
     .animationDelayLarger {
-        animation-delay: 500ms;
+        animation-delay: 1000ms;
     }
 
     @keyframes flipIn {
@@ -552,5 +681,20 @@ hr {
     .slideInAnimation {
         animation-name: slideIn;
         animation-duration: 500ms;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fadeInAnimation {
+        animation-name: fadeIn;
+        animation-duration: 600ms;
     }
 }
