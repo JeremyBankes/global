@@ -92,6 +92,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -104,7 +108,8 @@ label {
 
 input,
 button,
-textarea {
+textarea,
+select {
     padding: var(--space-small);
     background-color: var(--secondary-color);
     border: var(--border);
@@ -118,6 +123,10 @@ input {
     height: var(--font-size-medium);
 }
 
+input:focus {
+    border-color: var(--accent-color);
+}
+
 input[type='submit'],
 button {
     background-color: var(--accent-color);
@@ -127,8 +136,9 @@ button {
     cursor: pointer;
 }
 
-input:focus {
-    border-color: var(--accent-color);
+input[type='checkbox'],
+input[type='radio'] {
+    margin: 0;
 }
 
 hr {
@@ -138,6 +148,15 @@ hr {
     border-right: none;
     border-top: none;
     border-bottom: var(--border);
+}
+
+summary {
+    cursor: pointer;
+    user-select: none;
+}
+
+details[open] summary {
+    padding-bottom: var(--space-medium);
 }
 
 /** Layout */
@@ -180,6 +199,49 @@ hr {
 
 .verticalGap {
     gap: var(--space-medium) 0;
+}
+
+/* Containers */
+
+.checkboxContainer,
+.radioContainer {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-smaller);
+}
+
+.tableContainer {
+    position: relative;
+    min-height: var(--height-large);
+    height: 0;
+    border: var(--border);
+    overflow: auto;
+}
+
+.tableContainer>table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContainer>table>thead {
+    top: 0;
+    position: sticky;
+}
+
+.tableContainer td {
+    padding: 0;
+}
+
+.horizontalScrollContainer {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.verticalScrollContainer {
+    height: 0;
+    overflow-y: auto;
 }
 
 .noWrap {
@@ -330,6 +392,14 @@ hr {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.removed {
+    display: none;
 }
 
 @media only screen and (max-width: 200px) {
@@ -561,6 +631,10 @@ hr {
 
 .breathableVertical {
     padding: var(--space-medium) 0;
+}
+
+.border {
+    border: var(--border);
 }
 
 .textAlignStart {
