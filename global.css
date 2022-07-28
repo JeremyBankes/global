@@ -5,9 +5,10 @@
     --secondary-color: #eeeeee;
     --border-color: #dddddd;
     --accent-color: #0000aa;
-    --color-positive: #33aa33;
-    --color-neutral: #aaaaaa;
-    --color-negative: #aa3333;
+    --positive-color: #33aa33;
+    --neutral-color: #aaaaaa;
+    --warning-color: #eeaa33;
+    --negative-color: #aa3333;
 
     /** Spacing */
     --space-smaller: 0.25rem;
@@ -672,15 +673,15 @@ details[open] summary {
 }
 
 .textColorPositive {
-    color: var(--color-positive);
+    color: var(--positive-color);
 }
 
 .textColorNeutral {
-    color: var(--color-neutral);
+    color: var(--neutral-color);
 }
 
 .textColorNegative {
-    color: var(--color-negative);
+    color: var(--negative-color);
 }
 
 .fontSizeSmaller {
