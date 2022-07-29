@@ -142,6 +142,10 @@ input[type='radio'] {
     margin: 0;
 }
 
+textarea {
+    resize: vertical;
+}
+
 hr {
     width: 100%;
     margin: 0;
