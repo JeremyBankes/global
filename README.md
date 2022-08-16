@@ -1,2 +1,2 @@
 # Global
-## Jeremy's reusable global stylesheet.
+## Jeremy's global stylesheet, used for consistant styling across page and domain.
