@@ -2,6 +2,8 @@
     /** Colors */
     --background-color: #ffffff;
     --foreground-color: #000000;
+    --disabled-color: #666666;
+    --read-only-color: #555555;
     --secondary-color: #eeeeee;
     --border-color: #dddddd;
     --accent-color: #0000aa;
@@ -124,8 +126,15 @@ input {
     height: var(--font-size-medium);
 }
 
-input:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: var(--accent-color);
+}
+
+input:read-only:focus,
+textarea:read-only:focus {
+    border-color: var(--neutral-color);
 }
 
 input[type='submit'],
@@ -140,6 +149,10 @@ button {
 input[type='checkbox'],
 input[type='radio'] {
     margin: 0;
+}
+
+input:not([type="submit"]):read-only {
+    color: var(--read-only-color);
 }
 
 textarea {
