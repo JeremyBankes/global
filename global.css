@@ -7,10 +7,11 @@
     --secondary-color: #eeeeee;
     --border-color: #dddddd;
     --accent-color: #0000aa;
-    --positive-color: #33aa33;
+    --information-color: #0057e7;
+    --positive-color: #008744;
     --neutral-color: #aaaaaa;
-    --warning-color: #eeaa33;
-    --negative-color: #aa3333;
+    --warning-color: #ffa700;
+    --negative-color: #d62d20;
 
     /** Spacing */
     --space-smaller: 0.25rem;
@@ -66,12 +67,11 @@
 }
 
 html {
-    display: grid;
-    min-height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
+    min-height: 100vh;
     background-color: var(--background-color);
     color: var(--foreground-color);
     font-family: var(--font-normal);
@@ -113,6 +113,7 @@ input,
 button,
 textarea,
 select {
+    width: auto;
     padding: var(--space-small);
     background-color: var(--secondary-color);
     border: var(--border);
@@ -139,11 +140,21 @@ textarea:read-only:focus {
 
 input[type='submit'],
 button {
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--foreground-color);
+    border: var(--border);
+}
+
+input[type='submit'],
+button.input {
     background-color: var(--accent-color);
     color: var(--background-color);
-    border: none;
     font-weight: bold;
-    cursor: pointer;
 }
 
 input[type='checkbox'],
@@ -232,24 +243,37 @@ details[open] summary {
 
 .tableContainer {
     position: relative;
-    min-height: var(--height-large);
     height: 0;
+    min-height: var(--height-large);
     border: var(--border);
     overflow: auto;
 }
 
-.tableContainer>table {
-    width: 100%;
+.tableContainer table {
+    min-width: 100%;
     border-collapse: collapse;
 }
 
-.tableContainer>table>thead {
+.tableContainer thead {
     top: 0;
     position: sticky;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.tableContainer tfoot {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.tableContainer th {
+    white-space: nowrap;
+    padding: var(--space-smaller) var(--space-small);
 }
 
 .tableContainer td {
-    padding: 0;
+    white-space: nowrap;
+    padding: 0 var(--space-small);
 }
 
 .horizontalScrollContainer {
@@ -259,6 +283,7 @@ details[open] summary {
 
 .verticalScrollContainer {
     height: 0;
+    min-height: var(--height-medium);
     overflow-y: auto;
 }
 
