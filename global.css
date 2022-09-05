@@ -42,10 +42,10 @@
 
     /** Widths */
     --width-smaller: 200px;
-    --width-small: 300px;
-    --width-medium: 400px;
-    --width-large: 800px;
-    --width-larger: 1200px;
+    --width-small: 400px;
+    --width-medium: 800px;
+    --width-large: 1200px;
+    --width-larger: 1600px;
 
     /** Heights */
     --height-smaller: 50px;
@@ -97,6 +97,7 @@ a {
 
 ul {
     margin: 0;
+    padding: 0 0 0 var(--space-larger);
 }
 
 img {
@@ -124,7 +125,6 @@ select {
 
 input {
     box-sizing: content-box;
-    height: var(--font-size-medium);
 }
 
 input:focus,
@@ -139,6 +139,7 @@ textarea:read-only:focus {
 }
 
 input[type='submit'],
+input::-webkit-file-upload-button,
 button {
     border: none;
     cursor: pointer;
@@ -151,15 +152,23 @@ button {
 }
 
 input[type='submit'],
+input::-webkit-file-upload-button,
 button.input {
     background-color: var(--accent-color);
     color: var(--background-color);
     font-weight: bold;
+    padding: var(--space-small);
+    margin-right: var(--space-small);
 }
 
 input[type='checkbox'],
 input[type='radio'] {
     margin: 0;
+}
+
+input[type='file'] {
+    padding: 0;
+    text-align: center;
 }
 
 input:not([type="submit"]):read-only {
@@ -215,7 +224,7 @@ details[open] summary {
 }
 
 .column {
-    flex: var(--weight-smaller) 0 0;
+    flex: 1 1 0;
 }
 
 .gapless {
@@ -228,6 +237,18 @@ details[open] summary {
 
 .verticalGap {
     gap: var(--space-medium) 0;
+}
+
+.visibleOverflow {
+    overflow: visible;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+.autoOverflow {
+    overflow: auto;
 }
 
 /* Containers */
@@ -283,7 +304,7 @@ details[open] summary {
 
 .verticalScrollContainer {
     height: 0;
-    min-height: var(--height-medium);
+    min-height: var(--height-large);
     overflow-y: auto;
 }
 
