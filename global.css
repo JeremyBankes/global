@@ -158,7 +158,6 @@ button.input {
     color: var(--background-color);
     font-weight: bold;
     padding: var(--space-small);
-    margin-right: var(--space-small);
 }
 
 input[type='checkbox'],
@@ -173,6 +172,10 @@ input[type='file'] {
 
 input:not([type="submit"]):read-only {
     color: var(--read-only-color);
+}
+
+input::-webkit-file-upload-button {
+    height: 100%;
 }
 
 textarea {
