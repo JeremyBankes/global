@@ -793,6 +793,34 @@ details[open] summary {
     color: var(--negative-color);
 }
 
+.backgroundColorBackground {
+    background-color: var(--background-color);
+}
+
+.backgroundColorSecondary {
+    background-color: var(--secondary-color);
+}
+
+.backgroundColorNormal {
+    background-color: var(--foreground-color);
+}
+
+.backgroundColorAccent {
+    background-color: var(--accent-color);
+}
+
+.backgroundColorPositive {
+    background-color: var(--positive-color);
+}
+
+.backgroundColorNeutral {
+    background-color: var(--neutral-color);
+}
+
+.backgroundColorNegative {
+    background-color: var(--negative-color);
+}
+
 .fontSizeSmaller {
     font-size: var(--font-size-smaller);
 }
