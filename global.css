@@ -179,6 +179,36 @@ input::-webkit-file-upload-button {
     height: 100%;
 }
 
+.slidecontainer {
+    width: 100%;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: var(--space-larger);
+    background: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: var(--space-larger);
+    height: var(--space-larger);
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: var(--accent-color);
+    width: var(--space-larger);
+    height: var(--space-larger);
+    cursor: pointer;
+}
+
 textarea {
     resize: vertical;
 }
@@ -299,6 +329,10 @@ details[open] summary {
 .tableContainer td {
     white-space: nowrap;
     padding: 0 var(--space-small);
+}
+
+.tableContainer tbody tr:nth-child(even) {
+    background-color: var(--secondary-color);
 }
 
 .horizontalScrollContainer {
