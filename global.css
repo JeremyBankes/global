@@ -40,6 +40,13 @@
     --font-size-large: 1.5rem;
     --font-size-larger: 2rem;
 
+    /** Font Weight */
+    --font-weight-smaller: 100;
+    --font-weight-small: 300;
+    --font-weight-medium: 400;
+    --font-weight-large: 700;
+    --font-weight-larger: 900;
+
     /** Widths */
     --width-smaller: 200px;
     --width-small: 400px;
@@ -873,6 +880,30 @@ details[open] summary {
 
 .fontSizeLarger {
     font-size: var(--font-size-larger);
+}
+
+.fontWeightSmaller {
+    font-weight: var(--font-weight-smaller);
+}
+
+.fontWeightSmall {
+    font-weight: var(--font-weight-small);
+}
+
+.fontWeightMedium {
+    font-weight: var(--font-weight-medium);
+}
+
+.fontWeightLarge {
+    font-weight: var(--font-weight-large);
+}
+
+.fontWeightLarger {
+    font-weight: var(--font-weight-larger);
+}
+
+.fontStyleItalic {
+    font-style: italic;
 }
 
 @media (prefers-reduced-motion: no-preference) {
