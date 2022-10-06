@@ -858,6 +858,10 @@ details[open] summary {
     background-color: var(--neutral-color);
 }
 
+.backgroundColorWarning {
+    background-color: var(--warning-color);
+}
+
 .backgroundColorNegative {
     background-color: var(--negative-color);
 }
