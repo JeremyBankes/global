@@ -910,6 +910,18 @@ details[open] summary {
     font-style: italic;
 }
 
+.cursorDefault {
+    cursor: default;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorCrosshair {
+    cursor: crosshair;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     [animateIn] {
         opacity: 0;
