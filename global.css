@@ -858,6 +858,10 @@ details[open] summary {
     background-color: var(--neutral-color);
 }
 
+.backgroundColorWarning {
+    background-color: var(--warning-color);
+}
+
 .backgroundColorNegative {
     background-color: var(--negative-color);
 }
@@ -904,6 +908,18 @@ details[open] summary {
 
 .fontStyleItalic {
     font-style: italic;
+}
+
+.cursorDefault {
+    cursor: default;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorCrosshair {
+    cursor: crosshair;
 }
 
 @media (prefers-reduced-motion: no-preference) {
