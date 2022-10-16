@@ -350,7 +350,7 @@ details[open] summary {
 .verticalScrollContainer {
     height: 0;
     min-height: var(--height-large);
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .noWrap {
