@@ -10,7 +10,7 @@
     --information-color: #0057e7;
     --positive-color: #008744;
     --neutral-color: #aaaaaa;
-    --warning-color: #ffa700;
+    --warning-color: #f4b400;
     --negative-color: #d62d20;
 
     /** Spacing */
@@ -73,10 +73,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     min-height: 100vh;
     margin: 0;
@@ -115,6 +111,7 @@ img {
 }
 
 label {
+    user-select: none;
     font-size: smaller;
 }
 
@@ -126,6 +123,7 @@ select {
     padding: var(--space-small);
     background-color: var(--secondary-color);
     border: var(--border);
+    border-radius: var(--border-radius);
     font-size: var(--font-size-medium);
     font-family: var(--font-input);
     outline: none;
@@ -206,6 +204,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: var(--space-larger);
     height: var(--space-larger);
     background: var(--accent-color);
+    border-radius: var(--border-radius);
     cursor: pointer;
 }
 
@@ -308,7 +307,8 @@ details[open] summary {
     height: 0;
     min-height: var(--height-large);
     border: var(--border);
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
 }
 
 .tableContainer table {
@@ -512,7 +512,8 @@ details[open] summary {
 }
 
 .disabled,
-:disabled {
+:disabled,
+:disabled::-webkit-slider-thumb {
     cursor: default !important;
     opacity: 0.5;
 }
@@ -557,6 +558,12 @@ details[open] summary {
     .hideAtSmallerWidth {
         display: none;
     }
+
+    .noScrollAtSmallerWidth {
+        overflow-y: unset;
+        min-height: auto;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -598,6 +605,12 @@ details[open] summary {
 
     .hideAtSmallWidth {
         display: none;
+    }
+
+    .noScrollAtSmallWidth {
+        overflow-y: unset;
+        min-height: auto;
+        height: auto;
     }
 }
 
@@ -641,6 +654,12 @@ details[open] summary {
     .hideAtMediumWidth {
         display: none;
     }
+
+    .noScrollAtMediumWidth {
+        overflow-y: unset;
+        min-height: auto;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -683,6 +702,12 @@ details[open] summary {
     .hideAtLargeWidth {
         display: none;
     }
+
+    .noScrollAtLargeWidth {
+        overflow-y: unset;
+        min-height: auto;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -724,6 +749,12 @@ details[open] summary {
 
     .hideAtLargerWidth {
         display: none;
+    }
+
+    .noScrollAtLargerWidth {
+        overflow-y: unset;
+        min-height: auto;
+        height: auto;
     }
 }
 
