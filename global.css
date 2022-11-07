@@ -180,6 +180,12 @@ input:not([type="submit"]):read-only {
     color: var(--read-only-color);
 }
 
+input[type="number"].noSpinButtons::-webkit-outer-spin-button,
+input[type="number"].noSpinButtons::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 input::-webkit-file-upload-button {
     height: 100%;
 }
@@ -355,6 +361,10 @@ details[open] summary {
 
 .noWrap {
     flex-wrap: nowrap;
+}
+
+.borderRadius {
+    border-radius: var(--border-radius);
 }
 
 .weightNone {
@@ -895,6 +905,10 @@ details[open] summary {
 
 .backgroundColorNegative {
     background-color: var(--negative-color);
+}
+
+.backgroundColorBorder {
+    background-color: var(--border-color);
 }
 
 .fontSizeSmaller {
