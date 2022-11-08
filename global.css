@@ -317,34 +317,37 @@ details[open] summary {
     overflow-x: auto;
 }
 
-.tableContainer table {
+.tableContainer thead {
+    top: 0;
+    position: sticky;
+}
+
+table {
     min-width: 100%;
     border-collapse: collapse;
 }
 
-.tableContainer thead {
-    top: 0;
-    position: sticky;
+thead {
     background-color: var(--accent-color);
     color: var(--background-color);
 }
 
-.tableContainer tfoot {
+tfoot {
     background-color: var(--accent-color);
     color: var(--background-color);
 }
 
-.tableContainer th {
+th {
     white-space: nowrap;
     padding: var(--space-smaller) var(--space-small);
 }
 
-.tableContainer td {
+td {
     white-space: nowrap;
     padding: 0 var(--space-small);
 }
 
-.tableContainer tbody tr:nth-child(even) {
+tbody tr:nth-child(even) {
     background-color: var(--secondary-color);
 }
 
