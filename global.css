@@ -63,7 +63,7 @@
 
     /** Miscellaneous */
     --border: 1px solid var(--border-color);
-    --border-radius: 0;
+    --border-radius: var(--space-small);
     --translucent-opacity: 0.5;
 }
 
@@ -127,6 +127,11 @@ select {
     font-size: var(--font-size-medium);
     font-family: var(--font-input);
     outline: none;
+}
+
+progress {
+    width: auto;
+    padding: var(--space-small);
 }
 
 input {
