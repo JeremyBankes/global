@@ -963,6 +963,10 @@ tbody tr:nth-child(even) {
     font-style: italic;
 }
 
+.fontStyleStrikethrough {
+    text-decoration: line-through;
+}
+
 .cursorDefault {
     cursor: default;
 }
