@@ -134,6 +134,12 @@ progress {
     padding: var(--space-small);
 }
 
+label.required::after {
+    content: ' *';
+    font-weight: bold;
+    color: var(--negative-color);
+}
+
 input {
     box-sizing: content-box;
 }
