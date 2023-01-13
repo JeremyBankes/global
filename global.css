@@ -881,6 +881,10 @@ tbody tr:nth-child(even) {
     color: var(--positive-color);
 }
 
+.textColorWarning {
+    color: var(--warning-color);
+}
+
 .textColorNeutral {
     color: var(--neutral-color);
 }
