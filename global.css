@@ -1,12 +1,11 @@
 :root {
     /** Colors */
-    --background-color: #ffffff;
-    --foreground-color: #000000;
-    --disabled-color: #666666;
-    --read-only-color: #555555;
-    --secondary-color: #eeeeee;
-    --border-color: #dddddd;
-    --accent-color: #0000aa;
+    --light-color: #F9F9F9;
+    --theme-color: #C3B0A4;
+    --accent-color: #848385;
+    --alternate-color: #958A8F;
+    --dark-color: #433E3C;
+
     --information-color: #0057e7;
     --positive-color: #008744;
     --neutral-color: #aaaaaa;
@@ -14,10 +13,10 @@
     --negative-color: #d62d20;
 
     /** Spacing */
-    --space-smaller: 0.25rem;
+    --space-smaller: 0.2rem;
     --space-small: 0.50rem;
-    --space-medium: 0.75rem;
-    --space-large: 1.00rem;
+    --space-medium: 1.00rem;
+    --space-large: 1.50rem;
     --space-larger: 2.00rem;
 
     /** Weight */
@@ -29,9 +28,9 @@
     --weight-larger: 5;
 
     /** Font */
-    --font-normal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-input: monospace;
+    --font-normal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-input: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     /** Font Size */
     --font-size-smaller: 0.75rem;
@@ -62,8 +61,8 @@
     --height-larger: 600px;
 
     /** Miscellaneous */
-    --border: 1px solid var(--border-color);
-    --border-radius: var(--space-small);
+    --border: 1px solid var(--alternate-color);
+    --border-radius: var(--space-smaller);
     --translucent-opacity: 0.5;
 }
 
@@ -76,9 +75,10 @@
 body {
     min-height: 100vh;
     margin: 0;
-    background-color: var(--background-color);
-    color: var(--foreground-color);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
     font-family: var(--font-normal);
+    font-display: optional;
 }
 
 h1,
@@ -87,6 +87,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: var(--accent-color);
     margin: 0;
 }
 
@@ -121,7 +122,7 @@ textarea,
 select {
     width: auto;
     padding: var(--space-small);
-    background-color: var(--secondary-color);
+    background-color: var(--theme-color);
     border: var(--border);
     border-radius: var(--border-radius);
     font-size: var(--font-size-medium);
@@ -135,7 +136,7 @@ progress {
 }
 
 label.required::after {
-    content: ' *';
+    content: " *";
     font-weight: bold;
     color: var(--negative-color);
 }
@@ -155,7 +156,7 @@ textarea:read-only:focus {
     border-color: var(--neutral-color);
 }
 
-input[type='submit'],
+input[type="submit"],
 input::-webkit-file-upload-button,
 button {
     border: none;
@@ -163,26 +164,26 @@ button {
 }
 
 button {
-    background-color: var(--secondary-color);
-    color: var(--foreground-color);
+    background-color: var(--theme-color);
+    color: var(--dark-color);
     border: var(--border);
 }
 
-input[type='submit'],
+input[type="submit"],
 input::-webkit-file-upload-button,
 button.input {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--light-color);
     font-weight: bold;
     padding: var(--space-small);
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
     margin: 0;
 }
 
-input[type='file'] {
+input[type="file"] {
     padding: 0;
     text-align: center;
 }
@@ -208,10 +209,11 @@ input::-webkit-file-upload-button {
 input[type="range"] {
     width: 100%;
     height: var(--space-larger);
-    background: var(--secondary-color);
+    background: var(--theme-color);
     padding: 0;
     margin: 0;
     outline: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -242,7 +244,7 @@ hr {
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: var(--border);
+    border-bottom: 1px solid var(--alternate-color);
 }
 
 summary {
@@ -261,7 +263,7 @@ details[open] summary {
     flex-flow: column nowrap;
     justify-content: stretch;
     align-items: stretch;
-    gap: var(--space-medium);
+    gap: var(--space-small);
 }
 
 .rack {
@@ -340,12 +342,12 @@ table {
 
 thead {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--light-color);
 }
 
 tfoot {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--light-color);
 }
 
 th {
@@ -359,7 +361,7 @@ td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: var(--secondary-color);
+    background-color: var(--theme-color);
 }
 
 .horizontalScrollContainer {
@@ -375,10 +377,6 @@ tbody tr:nth-child(even) {
 
 .noWrap {
     flex-wrap: nowrap;
-}
-
-.borderRadius {
-    border-radius: var(--border-radius);
 }
 
 .weightNone {
@@ -788,7 +786,19 @@ tbody tr:nth-child(even) {
     padding: var(--space-medium);
     border: var(--border);
     border-radius: var(--border-radius);
-    background-color: var(--background-color);
+    background-color: var(--light-color);
+}
+
+.borderRadius {
+    border-radius: var(--border-radius);
+}
+
+.borderRadiusCircle {
+    border-radius: 50%;
+}
+
+.borderRadiusNone {
+    border-radius: var(--border-radius);
 }
 
 .loading {
@@ -797,7 +807,7 @@ tbody tr:nth-child(even) {
 }
 
 .loading::before {
-    content: ' ';
+    content: " ";
     position: absolute;
     top: 0;
     right: 0;
@@ -810,7 +820,7 @@ tbody tr:nth-child(even) {
 }
 
 .loading:after {
-    content: ' ';
+    content: " ";
     position: absolute;
     width: var(--space-larger);
     height: var(--space-larger);
@@ -849,6 +859,10 @@ tbody tr:nth-child(even) {
     border: var(--border);
 }
 
+.borderNone {
+    border: none;
+}
+
 .textAlignStart {
     text-align: start;
 }
@@ -862,15 +876,15 @@ tbody tr:nth-child(even) {
 }
 
 .textColorBackground {
-    color: var(--background-color);
+    color: var(--light-color);
 }
 
 .textColorSecondary {
-    color: var(--secondary-color);
+    color: var(--theme-color);
 }
 
 .textColorNormal {
-    color: var(--foreground-color);
+    color: var(--dark-color);
 }
 
 .textColorAccent {
@@ -894,15 +908,15 @@ tbody tr:nth-child(even) {
 }
 
 .backgroundColorBackground {
-    background-color: var(--background-color);
+    background-color: var(--light-color);
 }
 
 .backgroundColorSecondary {
-    background-color: var(--secondary-color);
+    background-color: var(--theme-color);
 }
 
 .backgroundColorNormal {
-    background-color: var(--foreground-color);
+    background-color: var(--dark-color);
 }
 
 .backgroundColorAccent {
@@ -926,7 +940,7 @@ tbody tr:nth-child(even) {
 }
 
 .backgroundColorBorder {
-    background-color: var(--border-color);
+    background-color: var(--alternate-color);
 }
 
 .fontSizeSmaller {
@@ -1063,4 +1077,8 @@ tbody tr:nth-child(even) {
         animation-name: fadeIn;
         animation-duration: 600ms;
     }
+}
+
+::selection {
+    background-color: var(--alternate-color);
 }
