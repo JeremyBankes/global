@@ -1,10 +1,10 @@
 :root {
     /** Colors */
-    --light-color: #F9F9F9;
-    --theme-color: #C3B0A4;
-    --accent-color: #848385;
-    --alternate-color: #958A8F;
-    --dark-color: #433E3C;
+    --light-color: #F8F5EC;
+    --dark-color: #383637;
+    --theme-color: #AF3737;
+    --accent-color: #E64948;
+    --alternate-color: #DFDDD4;
 
     --information-color: #0057e7;
     --positive-color: #008744;
@@ -96,7 +96,7 @@ p {
 }
 
 a {
-    color: var(--accent-color);
+    color: var(--theme-color);
     text-decoration: none;
 }
 
@@ -122,7 +122,7 @@ textarea,
 select {
     width: auto;
     padding: var(--space-small);
-    background-color: var(--theme-color);
+    background-color: var(--light-color);
     border: var(--border);
     border-radius: var(--border-radius);
     font-size: var(--font-size-medium);
@@ -148,7 +148,7 @@ input {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--accent-color);
+    border-color: var(--theme-color);
 }
 
 input:read-only:focus,
@@ -159,20 +159,17 @@ textarea:read-only:focus {
 input[type="submit"],
 input::-webkit-file-upload-button,
 button {
+    background-color: var(--theme-color);
+    color: var(--light-color);
     border: none;
     cursor: pointer;
-}
-
-button {
-    background-color: var(--theme-color);
-    color: var(--dark-color);
-    border: var(--border);
+    font-weight: bold;
 }
 
 input[type="submit"],
 input::-webkit-file-upload-button,
 button.input {
-    background-color: var(--accent-color);
+    background-color: var(--theme-color);
     color: var(--light-color);
     font-weight: bold;
     padding: var(--space-small);
@@ -209,7 +206,7 @@ input::-webkit-file-upload-button {
 input[type="range"] {
     width: 100%;
     height: var(--space-larger);
-    background: var(--theme-color);
+    background: var(--accent-color);
     padding: 0;
     margin: 0;
     outline: none;
@@ -222,13 +219,13 @@ input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     width: var(--space-larger);
     height: var(--space-larger);
-    background: var(--accent-color);
+    background: var(--theme-color);
     border-radius: var(--border-radius);
     cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb {
-    background: var(--accent-color);
+    background: var(--theme-color);
     width: var(--space-larger);
     height: var(--space-larger);
     cursor: pointer;
@@ -271,7 +268,7 @@ details[open] summary {
     flex-flow: row nowrap;
     justify-content: stretch;
     align-items: stretch;
-    gap: var(--space-medium);
+    gap: var(--space-small);
 }
 
 .row {
@@ -279,7 +276,7 @@ details[open] summary {
     flex-flow: row wrap;
     justify-content: stretch;
     align-items: stretch;
-    gap: var(--space-medium);
+    gap: var(--space-small);
 }
 
 .column {
@@ -341,12 +338,12 @@ table {
 }
 
 thead {
-    background-color: var(--accent-color);
+    background-color: var(--theme-color);
     color: var(--light-color);
 }
 
 tfoot {
-    background-color: var(--accent-color);
+    background-color: var(--theme-color);
     color: var(--light-color);
 }
 
@@ -358,10 +355,11 @@ th {
 td {
     white-space: nowrap;
     padding: 0 var(--space-small);
+    text-align: center;
 }
 
 tbody tr:nth-child(even) {
-    background-color: var(--theme-color);
+    background-color: var(--alternate-color);
 }
 
 .horizontalScrollContainer {
@@ -827,8 +825,8 @@ tbody tr:nth-child(even) {
     top: calc(50% - var(--space-larger));
     left: calc(50% - var(--space-larger));
     border-radius: 50%;
-    border: var(--space-small) solid var(--accent-color);
-    border-color: transparent var(--accent-color) transparent var(--accent-color);
+    border: var(--space-small) solid var(--theme-color);
+    border-color: transparent var(--theme-color) transparent var(--theme-color);
     animation: loading 1s ease-in-out infinite;
     z-index: 3;
 }
@@ -844,15 +842,15 @@ tbody tr:nth-child(even) {
 }
 
 .breathable {
-    padding: var(--space-medium);
+    padding: var(--space-small);
 }
 
 .breathableHorizontal {
-    padding: 0 var(--space-medium);
+    padding: 0 var(--space-small);
 }
 
 .breathableVertical {
-    padding: var(--space-medium) 0;
+    padding: var(--space-small) 0;
 }
 
 .border {
@@ -880,7 +878,7 @@ tbody tr:nth-child(even) {
 }
 
 .textColorSecondary {
-    color: var(--theme-color);
+    color: var(--accent-color);
 }
 
 .textColorNormal {
@@ -888,7 +886,7 @@ tbody tr:nth-child(even) {
 }
 
 .textColorAccent {
-    color: var(--accent-color);
+    color: var(--theme-color);
 }
 
 .textColorPositive {
@@ -912,7 +910,7 @@ tbody tr:nth-child(even) {
 }
 
 .backgroundColorSecondary {
-    background-color: var(--theme-color);
+    background-color: var(--accent-color);
 }
 
 .backgroundColorNormal {
@@ -920,7 +918,7 @@ tbody tr:nth-child(even) {
 }
 
 .backgroundColorAccent {
-    background-color: var(--accent-color);
+    background-color: var(--theme-color);
 }
 
 .backgroundColorPositive {
@@ -1081,4 +1079,20 @@ tbody tr:nth-child(even) {
 
 ::selection {
     background-color: var(--alternate-color);
+}
+
+::-webkit-scrollbar {
+    width: var(--space-small);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--alternate-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color);
 }
