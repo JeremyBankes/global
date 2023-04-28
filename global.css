@@ -1,9 +1,9 @@
 :root {
     /** Colors */
-    --light-color: #F8F5EC;
-    --dark-color: #383637;
-    --theme-color: #AF3737;
-    --accent-color: #E64948;
+    --light-color: #FFFFFF;
+    --dark-color: #111111;
+    --theme-color: #005090;
+    --accent-color: #0070BB;
     --alternate-color: #DFDDD4;
 
     --information-color: #0057e7;
@@ -62,7 +62,7 @@
 
     /** Miscellaneous */
     --border: 1px solid var(--alternate-color);
-    --border-radius: var(--space-smaller);
+    --border-radius: 0;
     --translucent-opacity: 0.5;
 }
 
@@ -562,6 +562,14 @@ tbody tr:nth-child(even) {
     opacity: 0.5;
 }
 
+.showAtSmallerWidth,
+.showAtSmallWidth,
+.showAtMediumWidth,
+.showAtLargeWidth,
+.showAtLargerWidth {
+    display: none;
+}
+
 @media only screen and (max-width: 200px) {
     .toColumnAtSmallerWidth {
         flex-flow: column nowrap;
@@ -601,6 +609,10 @@ tbody tr:nth-child(even) {
 
     .hideAtSmallerWidth {
         display: none;
+    }
+
+    .showAtSmallerWidth {
+        display: block;
     }
 
     .noScrollAtSmallerWidth {
@@ -651,6 +663,10 @@ tbody tr:nth-child(even) {
         display: none;
     }
 
+    .showAtSmallWidth {
+        display: block;
+    }
+
     .noScrollAtSmallWidth {
         overflow-y: unset;
         min-height: auto;
@@ -697,6 +713,10 @@ tbody tr:nth-child(even) {
 
     .hideAtMediumWidth {
         display: none;
+    }
+
+    .showAtMediumWidth {
+        display: block;
     }
 
     .noScrollAtMediumWidth {
@@ -747,6 +767,10 @@ tbody tr:nth-child(even) {
         display: none;
     }
 
+    .showAtLargeWidth {
+        display: block;
+    }
+
     .noScrollAtLargeWidth {
         overflow-y: unset;
         min-height: auto;
@@ -793,6 +817,10 @@ tbody tr:nth-child(even) {
 
     .hideAtLargerWidth {
         display: none;
+    }
+
+    .showAtLargerWidth {
+        display: block;
     }
 
     .noScrollAtLargerWidth {
