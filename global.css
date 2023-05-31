@@ -945,6 +945,14 @@ tbody tr:nth-child(even) {
     color: var(--theme-color);
 }
 
+.textColorTheme {
+    color: var(--theme-color);
+}
+
+.textColorBorder {
+    color: var(--alternate-color);
+}
+
 .textColorPositive {
     color: var(--positive-color);
 }
@@ -981,6 +989,10 @@ tbody tr:nth-child(even) {
     background-color: var(--theme-color);
 }
 
+.backgroundColorBorder {
+    background-color: var(--alternate-color);
+}
+
 .backgroundColorPositive {
     background-color: var(--positive-color);
 }
@@ -997,8 +1009,44 @@ tbody tr:nth-child(even) {
     background-color: var(--negative-color);
 }
 
-.backgroundColorBorder {
-    background-color: var(--alternate-color);
+.fillColorBackground path {
+    fill: var(--light-color);
+}
+
+.fillColorSecondary path {
+    fill: var(--accent-color);
+}
+
+.fillColorNormal path {
+    fill: var(--dark-color);
+}
+
+.fillColorAccent path {
+    fill: var(--theme-color);
+}
+
+.fillColorTheme path {
+    fill: var(--theme-color);
+}
+
+.fillColorBorder path {
+    fill: var(--alternate-color);
+}
+
+.fillColorPositive path {
+    fill: var(--positive-color);
+}
+
+.fillColorWarning path {
+    fill: var(--warning-color);
+}
+
+.fillColorNeutral path {
+    fill: var(--neutral-color);
+}
+
+.fillColorNegative path {
+    fill: var(--negative-color);
 }
 
 .fontSizeSmaller {
