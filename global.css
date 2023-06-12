@@ -386,6 +386,14 @@ tbody tr:nth-child(even) {
     background-color: var(--alternate-color);
 }
 
+.inputContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: var(--space-smaller);
+}
+
 .horizontalScrollContainer {
     max-width: 100%;
     overflow-x: auto;
@@ -848,7 +856,7 @@ tbody tr:nth-child(even) {
 }
 
 .borderRadiusNone {
-    border-radius: var(--border-radius);
+    border-radius: 0;
 }
 
 .loading {
@@ -911,6 +919,7 @@ tbody tr:nth-child(even) {
 
 .border {
     border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 .borderNone {
