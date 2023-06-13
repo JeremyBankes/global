@@ -7,9 +7,9 @@
     --alternate-color: #DFDDD4;
 
     --information-color: #0057e7;
-    --positive-color: #008744;
+    --positive-color: #309020;
     --neutral-color: #aaaaaa;
-    --warning-color: #f4b400;
+    --warning-color: #eba934;
     --negative-color: #d62d20;
 
     /** Spacing */
@@ -402,7 +402,7 @@ tbody tr:nth-child(even) {
 .verticalScrollContainer {
     height: 0;
     min-height: var(--height-large);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .noWrap {
