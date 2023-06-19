@@ -114,6 +114,7 @@ img {
 label {
     user-select: none;
     font-size: smaller;
+    white-space: nowrap;
 }
 
 input,
@@ -194,6 +195,42 @@ input[type="radio"]:checked::after {
     background-color: var(--accent-color);
     border-radius: var(--border-radius);
     transform: scale(0.6);
+}
+
+input[type="checkbox"].switch,
+input[type="radio"].switch {
+    border: none;
+    background-color: var(--alternate-color);
+    width: calc(var(--space-large) * 2);
+    height: var(--space-small);
+    cursor: pointer;
+}
+
+input[type="checkbox"].switch::after,
+input[type="radio"].switch::after {
+    position: absolute;
+    display: flex;
+    content: "OFF";
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-smaller);
+    font-weight: var(--font-weight-large);
+    color: var(--light-color);
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--negative-color);
+    border-radius: var(--border-radius);
+    border: none;
+    transform: none;
+}
+
+input[type="checkbox"].switch:checked::after,
+input[type="radio"].switch:checked::after {
+    content: "ON";
+    background-color: var(--theme-color);
+    left: 50%;
 }
 
 input[type="radio"] {
