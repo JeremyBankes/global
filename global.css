@@ -143,6 +143,7 @@ label.required::after {
 }
 
 input {
+    color: var(--dark-color);
     box-sizing: content-box;
 }
 
