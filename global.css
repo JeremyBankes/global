@@ -122,8 +122,11 @@ button,
 textarea,
 select {
     width: auto;
+    height: var(--space-large);
     padding: var(--space-small);
+    box-sizing: content-box;
     background-color: var(--light-color);
+    color: var(--dark-color);
     border: var(--border);
     border-radius: var(--border-radius);
     font-size: var(--font-size-medium);
@@ -142,11 +145,6 @@ label.required::after {
     color: var(--negative-color);
 }
 
-input {
-    color: var(--dark-color);
-    box-sizing: content-box;
-}
-
 input:focus,
 select:focus,
 textarea:focus {
@@ -163,7 +161,8 @@ input::-webkit-file-upload-button,
 button {
     background-color: var(--theme-color);
     color: var(--light-color);
-    border: none;
+    border: var(--border);
+    border-color: var(--accent-color);
     cursor: pointer;
     font-weight: bold;
 }
@@ -181,6 +180,8 @@ input[type="checkbox"],
 input[type="radio"] {
     position: relative;
     margin: 0;
+    width: 0;
+    height: 0;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -294,6 +295,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 textarea {
+    height: var(--height-small);
     resize: vertical;
 }
 
