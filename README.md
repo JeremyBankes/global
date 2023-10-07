@@ -1,2 +1,2 @@
-# Global
-## Jeremy's global stylesheet, used for consistant styling across page and domain.
+|⚠️| This project has been deprecated in favour of [Lucania/Lux](https://github.com/lucania-software/lux) |
+|-|-|
