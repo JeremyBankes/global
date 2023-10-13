@@ -376,7 +376,7 @@ details[open] summary {
 .checkboxContainer,
 .radioContainer {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: min-content min-content;
     justify-content: flex-start;
     align-items: center;
     gap: var(--space-smaller);
