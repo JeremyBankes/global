@@ -548,6 +548,10 @@ tbody tr:nth-child(even) {
     min-width: var(--width-larger);
 }
 
+.maximumHeightNone {
+    max-height: 0;
+}
+
 .maximumHeightSmaller {
     max-height: var(--height-smaller);
 }
@@ -566,6 +570,10 @@ tbody tr:nth-child(even) {
 
 .maximumHeightLarger {
     max-height: var(--height-larger);
+}
+
+.minimumHeightNone {
+    min-height: 0;
 }
 
 .minimumHeightSmaller {
